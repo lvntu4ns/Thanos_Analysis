@@ -9,7 +9,7 @@
 
 \- **Source:** [Thanos Github](https://github.com/kh4sh3i/Ransomware-Samples/blob/main/Thanos/Ransomware.Thanos.zip)
 
-## **2. Phân tích**
+## **2. Phân tích Tĩnh**
 **Xác định thuộc tính file:**
 -
 - Header 4D 5A (MZ) -> PE file
@@ -51,3 +51,10 @@
 
     ![alt text](img/image6.png)
 
+- **SniffersKiller** sẽ kill hết các tiến trình theo dõi mạng như wireshark, fiddler, ... Điều này có thể được sử dụng để tránh bị phát hiện khi mã độc thực hiện các hoạt động mạng bất hợp pháp. Nó kiểm tra và nếu đúng điều kiện thì khởi tạo 1 tiến trình ngầm với mức ưu tiên thấp để chặn các phần mềm trong list.
+    
+    ![alt text](img/image7.png)
+
+- Ở đây ta có 2 list là **AppFilter** và **DumpFilter**, đi vào ta có được list danh sách bị mã hóa bằng base64, decode ra và thu được:
+
+    ![alt text](img/image8.png)
